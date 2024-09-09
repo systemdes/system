@@ -25,7 +25,7 @@ import Nav from '../components/nav.astro';
 	<body>
     <Nav />
     <main>
-		  <slot />
+      <slot />
     </main>
 	</body>
 </html>
@@ -33,7 +33,8 @@ import Nav from '../components/nav.astro';
 
   body {
     font-family: "Inter", sans-serif;
-    background: #FBFAFD;
+    font-size: 1em;
+    background: #fff;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
@@ -41,6 +42,13 @@ import Nav from '../components/nav.astro';
   }
 
   main {
-    margin: 4em;
+    margin: 1em;
+    background: #FAFAFA;
+    width: 100%;
+    border-radius: var(--radius-l);
+  }
+
+  section {
+    padding: var(--space-l);
   }
 </style>

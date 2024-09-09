@@ -1,3 +1,7 @@
+---
+import Card from '../components/card.astro';
+---
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -11,11 +15,7 @@
 		<title>Astro</title>
 	</head>
 	<body>
-    <article>
-      <img src="https://placehold.co/50x50">
-      <h2>Foundations</h2>
-      <h3>Principles and design guidelines</h3>
-    </article>
+    <Card />
 	</body>
 </html>
 
@@ -27,14 +27,5 @@
     align-items: center;
     height: 98vh;
     font-family: "Inter", system-ui;
-  }
-</style>
-
-<style>
-  article {
-    background: var(--color-primary);
-    border: var(--border-m);
-    border-radius: var(--radius-m);
-    padding: var(--space-l);
   }
 </style>

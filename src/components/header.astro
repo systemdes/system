@@ -1,0 +1,29 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  label: string;
+}
+
+const { title, description, label } = Astro.props;
+---
+
+<header>
+  <span>{label}</span>
+  <h1>{title}</h1>
+  <p>{description}</p>
+</header>
+
+<style>
+  header {
+    border-bottom: var(--border-s);
+    padding: var(--space-l);
+  }
+
+  span {
+    background: #E9F4FF;
+    padding: var(--space-s) var(--space-s);
+    border-radius: var(--radius-s);
+    color: #0060F2;
+  }
+</style>

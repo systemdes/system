@@ -1,0 +1,17 @@
+.grid-s {
+  display: grid;
+  grid-gap: var(--space-m);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.grid-m {
+  display: grid;
+  grid-gap: var(--space-m);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.grid-l {
+  display: grid;
+  grid-gap: var(--space-m);
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
