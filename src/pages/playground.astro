@@ -1,0 +1,40 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css">
+		<title>Astro</title>
+	</head>
+	<body>
+    <article>
+      <img src="https://placehold.co/50x50">
+      <h2>Foundations</h2>
+      <h3>Principles and design guidelines</h3>
+    </article>
+	</body>
+</html>
+
+<style is:global>
+  body {
+    background: var(--color-tertairy);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    font-family: "Inter", system-ui;
+  }
+</style>
+
+<style>
+  article {
+    background: var(--color-primary);
+    border: var(--border-m);
+    border-radius: var(--radius-m);
+    padding: var(--space-l);
+  }
+</style>

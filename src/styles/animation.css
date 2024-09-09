@@ -1,0 +1,17 @@
+:root {
+  --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes fadeInUp {
+  from {
+    filter: blur(10px);
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    filter: blur(0px);
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
