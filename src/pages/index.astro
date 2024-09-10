@@ -1,0 +1,91 @@
+---
+  import Card from '../components/card.astro';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css">
+		<title>Astro</title>
+	</head>
+	<body>
+    <header>
+      <div>
+        <h1>vriOS <span>system</span></h1>
+        <span>spec : v1.0.2</span>
+      </div>
+      <p>is an opinionated set of design principles and foundational philosophies for creating digital and physical experiences by Danny de Vries.</p>
+      <a href="#">Read about the architecture</a>
+    </header>
+    <main>
+      <img src="https://placehold.co/1800x600">
+      <section class="grid-l">
+        <Card title="Principles" description="dshflsjflsjfsfl" />
+        <Card title="Assets" description="dshflsjflsjfsfl" />
+        <Card title="Typography" description="dshflsjflsjfsfl" />
+        <Card title="Iconography" description="dshflsjflsjfsfl" />
+        <Card title="Components" description="dshflsjflsjfsfl" />
+        <Card title="Colors" description="dshflsjflsjfsfl" />
+        <Card title="Motion" description="dshflsjflsjfsfl" />
+        <Card title="Grids" description="dshflsjflsjfsfl" />
+        <Card title="Spacing" description="dshflsjflsjfsfl" />
+        <Card title="Materials" description="dshflsjflsjfsfl" />
+        <Card title="Textiles" description="dshflsjflsjfsfl" />
+      </section>
+    </main>
+	</body>
+</html>
+
+<style is:global>
+  body {
+    background: var(--color-tertairy);
+    font-family: "Inter", system-ui;
+    margin: var(--space-m);
+  }
+</style>
+
+<style>
+    header {
+    background: #fff;
+    border-radius: var(--radius-m);
+    padding: var(--space-l);
+  }
+
+  header h1 {
+    font-size: var(--size-3xl);
+  }
+
+  header div {
+    display: flex;
+    align-items: center;
+  }
+
+  header div > span {
+    background: #E9F4FF;
+    padding: var(--space-s) var(--space-s);
+    border-radius: var(--radius-s);
+    color: #0060F2;
+    margin-left: var(--space-m);
+  }
+
+  header p {
+    font-size: var(--size-l);
+    width: 50vw;
+  }
+
+  section {
+    margin-top: var(--space-l);
+  }
+
+  img {
+    border-radius: var(--radius-l);
+    margin-top: var(--space-m);
+  }
+
+</style>
