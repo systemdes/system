@@ -1,41 +1,65 @@
 ---
 export interface Props {
+  image: string;
   title: string;
   description: string;
+  link: string;
+  icon: string;
 }
 
-const { title, description } = Astro.props;
+const { image, title, description, icon } = Astro.props;
+
+import ArrowUpRight from '../components/icons/ph:arrow-up-right.svg?raw';
 ---
 
 <article>
-  <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
-    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16"/>
-      <circle cx="12" cy="12" r="4"/>
-    </g>
-  </svg>
-  <h2>{title}</h2>
-  <h3>{description}</h3>
+  <img src={image}>
+  <footer>
+    <h3>{title}</h2>
+    <p>{description}</p>
+    <a href="{link}" set:html={icon}></a>
+  </footer>
 </article>
 
 <style>
   article {
-    background: var(--color-primary);
-    border: var(--border-m);
+    background: var(--color-tertairy);
+    border: var(--border-s);
     border-radius: var(--radius-m);
+  }
+
+  article footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     padding: var(--space-l);
-    height: 30vh;
   }
 
-  article > * + * {
-    margin-block-start: var(--space-s);
+  article img {
+    height: 25vh;
+    width: 100%;
+    object-fit: cover;
   }
 
-  article h2 {
-    font-weight: 600;
+  article a {
+    display: grid;
+    grid-row: 2;
+    justify-self: end;
+    align-self: end;
+    background: var(--color-tertairy);
+    border: var(--border-s);
+    padding: var(--space-s);
+    border-radius: var(--radius-s);
   }
 
   article h3 {
+    font-weight: 600;
+    align-self: end;
+  }
+
+  article p {
     font-weight: 300;
+    grid-row: 2;
+    align-self: end;
   }
 </style>

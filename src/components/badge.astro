@@ -1,0 +1,20 @@
+---
+export interface Props {
+  label: string;
+}
+
+const { label } = Astro.props;
+---
+
+<span>{ label }</span>
+
+<style>
+  span {
+    background: var(--color-quaternary);
+    padding: var(--space-xs) var(--space-s);
+    border: var(--border-m);
+    border-radius: var(--radius-m);
+    font-weight: 500;
+    font-size: var(--size-s);
+  }
+</style>

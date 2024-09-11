@@ -1,0 +1,22 @@
+---
+export interface Props {
+  link: string;
+  icon: string;
+}
+
+const { link, icon } = Astro.props;
+---
+
+<a href="{ link }">
+  <span set:html={icon}></span>
+</a>
+
+<style>
+  a {
+    background: var(--color-quaternary);
+    padding: var(--space-s) var(--space-s);
+    border: var(--border-m);
+    border-radius: var(--radius-l);
+    font-weight: 500;
+  }
+</style>

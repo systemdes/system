@@ -1,0 +1,17 @@
+---
+export interface Props {
+  link: string;
+  text: string;
+}
+
+const { link, text } = Astro.props;
+---
+
+<a href="{ link }">{ text } →</a>
+
+<style>
+  a {
+    padding: var(--space-s) var(--space-m);
+    font-weight: 500;
+  }
+</style>

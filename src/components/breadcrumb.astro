@@ -1,0 +1,22 @@
+---
+import DotsNine from '../components/icons/ph:dots-nine.svg?raw';
+---
+
+<nav>
+  <button set:html={ DotsNine }></button>
+  <p>Components → Badge</p>
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  button {
+    background: var(--color-secondary);
+    border-radius: var(--radius-s);
+    color: var(--color-primary);
+    padding: var(--space-xs);
+    margin-right: var(--space-m);
+  }
+</style>

@@ -1,0 +1,19 @@
+---
+export interface Props {
+  link: string;
+}
+
+const { link } = Astro.props;
+---
+
+<a href="#">{ link }</a>
+
+<style>
+  a {
+    background: var(--color-quaternary);
+    padding: var(--space-s) var(--space-m);
+    border: var(--border-m);
+    border-radius: var(--radius-l);
+    font-weight: 500;
+  }
+</style>

@@ -1,5 +1,15 @@
 ---
+// import Card from '../components/card.astro';
+// import Badge from '../components/badge.astro';
+// import Button from '../components/button.astro';
+// import Link from '../components/link.astro';
+// import Icon from '../components/icon.astro';
 import Card from '../components/card.astro';
+
+
+/* Imported icons */
+import ArrowUpRight from '../components/icons/ph:arrow-up-right.svg?raw';
+
 ---
 
 <html lang="en">
@@ -15,13 +25,17 @@ import Card from '../components/card.astro';
 		<title>Astro</title>
 	</head>
 	<body>
-    <Card />
+    <!-- <Badge label="Foundations"/> -->
+    <!-- <Button link="Get started" /> -->
+    <!-- <Link link="#" text="Learn more" /> -->
+    <!-- <Icon link="#" icon={ArrowUpRight} /> -->
+    <Card image="https://placehold.co/600x600" title="Components" description="Building blocks for interface applications" icon={ArrowUpRight}/>
 	</body>
 </html>
 
 <style is:global>
   body {
-    background: var(--color-tertairy);
+    background: var(--color-primary);
     display: flex;
     justify-content: center;
     align-items: center;
