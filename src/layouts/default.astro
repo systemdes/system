@@ -6,6 +6,7 @@ interface Props {
 const { title } = Astro.props;
 
 import Nav from '../components/nav.astro';
+
 ---
 
 <!doctype html>
@@ -23,10 +24,10 @@ import Nav from '../components/nav.astro';
 		<title>{title}</title>
 	</head>
 	<body>
-    <!-- <Nav /> -->
     <main>
       <slot />
     </main>
+    <Nav />
 	</body>
 </html>
 <style is:global>
@@ -34,7 +35,9 @@ import Nav from '../components/nav.astro';
   body {
     font-family: "Inter", sans-serif;
     font-size: 1em;
-    background: #fff;
+        background: var(--color-tertairy);
+    background-image: radial-gradient(#EFEFEF 0.8px, #FFF 0.8px);
+    background-size: 12px 12px;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
@@ -44,7 +47,7 @@ import Nav from '../components/nav.astro';
   main {
     margin: 1em;
     background: #FAFAFA;
-    width: 100%;
+    width: 80vw;
     border-radius: var(--radius-l);
   }
 

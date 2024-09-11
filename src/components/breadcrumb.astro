@@ -1,10 +1,36 @@
 ---
 import DotsNine from '../components/icons/ph:dots-nine.svg?raw';
+
+// Extract the current path from the Astro object
+const currentPath = Astro.url.pathname;
+
+// Split the path into parts, remove empty entries
+const pathSegments = currentPath.split('/').filter(segment => segment);
+
+// Create breadcrumb data
+const breadcrumbData = pathSegments.map((segment, index) => {
+  const path = '/' + pathSegments.slice(0, index + 1).join('/');
+  const name = segment.charAt(0).toUpperCase() + segment.slice(1); // Capitalize first letter
+  return { path, name };
+});
 ---
+
+
 
 <nav>
   <button set:html={ DotsNine }></button>
-  <p>Components → Badge</p>
+    <ol class="breadcrumb">
+    <li><a href="/">Home</a></li>
+    {breadcrumbData.map((crumb, index) => (
+      <li>
+        {index < breadcrumbData.length - 1 ? (
+          <a href={crumb.path}>{crumb.name}</a>
+        ) : (
+          <span>{crumb.name}</span> // Last item is not clickable
+        )}
+      </li>
+    ))}
+  </ol>
 </nav>
 
 <style>
