@@ -20,17 +20,21 @@ const breadcrumbData = pathSegments.map((segment, index) => {
 <nav>
   <button set:html={ DotsNine }></button>
     <ol class="breadcrumb">
-    <li><a href="/">Home</a></li>
+    <li><a href="/">Overview</a></li>
     {breadcrumbData.map((crumb, index) => (
       <li>
         {index < breadcrumbData.length - 1 ? (
           <a href={crumb.path}>{crumb.name}</a>
         ) : (
-          <span>{crumb.name}</span> // Last item is not clickable
+          <span>←</span>
+          <span>{crumb.name}</span>
         )}
       </li>
     ))}
   </ol>
+  <input type="search">
+  <button set:html={ DotsNine }></button>
+  <button set:html={ DotsNine }></button>
 </nav>
 
 <style>
@@ -43,6 +47,25 @@ const breadcrumbData = pathSegments.map((segment, index) => {
     border-radius: var(--radius-s);
     color: var(--color-primary);
     padding: var(--space-xs);
-    margin-right: var(--space-m);
+    /* margin-right: var(--space-l); */
+  }
+
+  ol {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    background: var(--color-secondary);
+    border-radius: var(--radius-s);
+    color: var(--color-primary);
+    padding: var(--space-xs);
+    margin-right: var(--space-l);
+  }
+
+  ol li:first-of-type {
+    margin-right: var(--space-xs);
+  }
+
+  input {
+    flex-grow: 1;
   }
 </style>

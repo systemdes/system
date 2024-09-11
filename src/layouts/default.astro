@@ -6,6 +6,7 @@ interface Props {
 const { title } = Astro.props;
 
 import Nav from '../components/nav.astro';
+import Breadcrumb from '../components/breadcrumb.astro';
 
 const { headings } = Astro.props;
 ---
@@ -26,6 +27,7 @@ const { headings } = Astro.props;
 	</head>
 	<body>
     <main>
+      <Breadcrumb />
       <slot />
     </main>
     <Nav headings={headings} />
@@ -36,9 +38,9 @@ const { headings } = Astro.props;
   body {
     font-family: "Inter", sans-serif;
     font-size: 1em;
-        background: var(--color-tertairy);
-    background-image: radial-gradient(#EFEFEF 0.8px, #FFF 0.8px);
-    background-size: 12px 12px;
+    background-color: #ffffff;
+    background-image:  linear-gradient(#e6e6e6 1px, transparent 1px), linear-gradient(to right, #e6e6e6 1px, #ffffff 1px);
+    background-size: 16px 16px;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
