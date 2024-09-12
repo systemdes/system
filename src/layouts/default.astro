@@ -26,8 +26,8 @@ const { headings } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+    <Breadcrumb />
     <main>
-      <Breadcrumb />
       <slot />
     </main>
     <Nav headings={headings} />
@@ -38,20 +38,23 @@ const { headings } = Astro.props;
   body {
     font-family: "Inter", sans-serif;
     font-size: 1em;
-    background-color: #ffffff;
-    background-image:  linear-gradient(#e6e6e6 1px, transparent 1px), linear-gradient(to right, #e6e6e6 1px, #ffffff 1px);
-    background-size: 16px 16px;
-    margin: 0;
+    background: var(--color-tertairy);
+    background-image: radial-gradient(#EFEFEF 0.8px, #FFF 0.8px);
+    background-size: 12px 12px;
     padding: 0;
     font-family: sans-serif;
-    display: flex;
+    display: grid;
+    gap: var(--space-l);
+    margin: var(--space-l);
+    grid-template-columns: repeat(8, 1fr); /* Example: 3 equal columns */
+    width: 100%; /* Ensures grid container fits within the viewport */
+    width: calc(100% - 2 * var(--space-l)); /* Adjust width to account for margin */
   }
 
   main {
-    margin: 1em;
     background: #FAFAFA;
-    width: 80vw;
     border-radius: var(--radius-l);
+    grid-column: 1 / 7;
   }
 
   section {
