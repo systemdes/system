@@ -7,6 +7,7 @@ const { title } = Astro.props;
 
 import Nav from '../components/nav.astro';
 import Breadcrumb from '../components/breadcrumb.astro';
+import Sidebar from '../components/sidebar.astro';
 
 const { headings } = Astro.props;
 ---
@@ -26,7 +27,9 @@ const { headings } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+
     <Breadcrumb />
+    <Sidebar />
     <main>
       <slot />
     </main>
@@ -46,7 +49,7 @@ const { headings } = Astro.props;
     display: grid;
     gap: var(--space-l);
     margin: var(--space-l);
-    grid-template-columns: repeat(8, 1fr); /* Example: 3 equal columns */
+    grid-template-columns: repeat(16, 1fr); /* Example: 3 equal columns */
     width: 100%; /* Ensures grid container fits within the viewport */
     width: calc(100% - 2 * var(--space-l)); /* Adjust width to account for margin */
   }
@@ -54,7 +57,9 @@ const { headings } = Astro.props;
   main {
     background: #FAFAFA;
     border-radius: var(--radius-l);
-    grid-column: 1 / 7;
+    grid-column: 2 / 14;
+    overflow-y: scroll;
+    height: 90vh;
   }
 
   section {
