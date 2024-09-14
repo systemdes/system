@@ -8,13 +8,15 @@
 
 :root {
   /* Type scale */
-  --size-xs: 0.75rem;
-  --size-s: 0.875rem;
+  --size-xs: 0.79rem;
+  --size-s: 0.889rem;
   --size-m: 1rem;
-  --size-l: 1.25rem;
-  --size-xl: 1.5rem;
-  --size-2xl: 2rem;
-  --size-3xl: 3rem;
+  --size-l: 1.125rem;
+  --size-xl: 1.266rem;
+  --size-2xl: 1.424rem;
+  --size-3xl: 1.602rem;
+  --size-4xl: 1.802rem;
+  --size-5xl: 2.027rem;
 
   /* Line heights */
   --leading-s: 1.4;

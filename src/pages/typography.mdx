@@ -6,7 +6,9 @@ import Header from "../components/header.astro";
 
 import Sans from "../components/docs/ff-sans-example.astro";
 import Mono from "../components/docs/ff-mono-example.astro";
-import Serif from "../components/docs/ff-serif-example.astro";
+import Scale from "../components/docs/type-scale-example.astro";
+import Weights from "../components/docs/type-weight-example.astro";
+import Line from "../components/docs/type-line-example.astro";
 
 <Header
   label="Core"
@@ -14,49 +16,42 @@ import Serif from "../components/docs/ff-serif-example.astro";
   description="Creating clear hierarchy and legibile content. The typographic system prioritises legilibity over personality."
 />
 
-<section>
+<section class="stack">
 
 ## Type faces
 
 ### Sans-serif
 
-Inter is the standard typeface for display and body copy. Inter is an open source, sans-serif font designed by Rasmus Andersson. Download from [RSMS website](https://rsms.me/inter/).
+[Inter](https://rsms.me/inter/) is the standard typeface for display and body copy. Probably the most versatile, neutral and carefully crafted typeface on the planet making it a good default for a wide range of use cases. It is open source and created by [Rasmus Andersson](https://rsms.me/about/).
+
+[Download Inter from GitHub](https://github.com/rsms/inter).
 
 <Sans />
 
-### Serif
-
-Used for writing or long form text IA writer duospace.
-
-<Serif />
-
 ### Monospace
 
-For coding interfaces and snippets Fira Code is the monospace font of choice.
+[Jetbrains Mono](https://www.jetbrains.com/lp/mono/) is used to create a 'techy' feel due to it's monospaced nature. It's main selling point is the increased letter height for a better reading experience and compared to other monospaced fonts have simpler forms. It is open source and created by [Philipp Nurullin](https://www.behance.net/funurullinfe3c).
+
+[Download Jetbrains Mono from GitHub](https://github.com/rsms/inter).
 
 <Mono />
 
-## Readability
+## Type scale
 
-- **Line length**: Keep lines around 80 characters or less, good general rule of thumb for designing layouts.
-- **Type alignment**: Content is typically left-aligned and ragged right. Centering, and right-aligning text is atypical.
-- **Letter spacing:** Letter-spacing is almost never modified. Generally speaking, avoid tweaking letter spacing.
-- **Styling text:** Not very common to italicize or underline body text. Refrain from using these stylings. Emphasise (bold) is more common and preferred for visual focus.
+The typographic system has a **Major second (1.125)** type scale. This means that each size is multiplied or divided by 1.125 (rounded off) from the previous size, starting with the base size of **16px**. The typographic scale are labelled to _lettered size scales._ The minimum font-size for legilibility reasons is 16px.
 
-## Type components
+<Scale />
 
-Which font and scale to use depends on the context it being used in. I define roughly 4 categories of typographic components.
-
-| Value   | Name | Description           | Token                  |
-| ------- | ---- | --------------------- | ---------------------- |
-| Display | bim  | Such as headings      | `var(--color-primary)` |
-| Body    | bim  | Long-form text        | `var(--color-primary)` |
-| Details | bim  | Links, buttons etc.   | `var(--color-primary)` |
-| Code    | bim  | Snippets, alerts etc. | `var(--color-primary)` |
+| Value   | Font-size | Description      | Token                  |
+| ------- | --------- | ---------------- | ---------------------- |
+| text-xs | `1.2rem`  | Such as headings | `var(--color-primary)` |
+| text-s  | bim       | Long-form text   | `var(--color-primary)` |
 
 ## Font weights
 
 Body text is set in the **regular** weight. Headings are set in **bold** weight. _Light_ and _medium_ are not used often but sometimes for labels and smaller components.
+
+<Weights />
 
 | Value   | Name | Description           | Token                  |
 | ------- | ---- | --------------------- | ---------------------- |
@@ -65,27 +60,28 @@ Body text is set in the **regular** weight. Headings are set in **bold** weight.
 | Medium  | bim  | Links, buttons etc.   | `var(--color-primary)` |
 | Bold    | bim  | Snippets, alerts etc. | `var(--color-primary)` |
 
-## Type scale
-
-The typographic system has a **Major second (1.125)** type scale. This means that each size is multiplied or divided by 1.125 (rounded off) from the previous size, starting with the base size of **16px**. The typographic scale are labelled to _lettered size scales._ The minimum font-size for legilibility reasons is 16px.
-
-| Value   | Font-size | Description      | Token                  |
-| ------- | --------- | ---------------- | ---------------------- |
-| text-xs | `1.2rem`  | Such as headings | `var(--color-primary)` |
-| text-s  | bim       | Long-form text   | `var(--color-primary)` |
-
 ## Line height
 
 The typography system uses a **0.25 (incremental) multiplier** for line-heights.
+
+<Line />
 
 | Value   | Name | Description      | Token                  |
 | ------- | ---- | ---------------- | ---------------------- |
 | line-xs | bim  | Such as headings | `var(--color-primary)` |
 | line-s  | bim  | Long-form text   | `var(--color-primary)` |
 
-#### Consumables
+## Readability
+
+- **Line length**: Keep lines around 80 characters or less, good general rule of thumb for designing layouts.
+- **Type alignment**: Content is typically left-aligned and ragged right. Centering, and right-aligning text is atypical.
+- **Letter spacing:** Letter-spacing is almost never modified. Generally speaking, avoid tweaking letter spacing.
+- **Styling text:** Not very common to italicize or underline body text. Refrain from using these stylings. Emphasise (bold) is more common and preferred for visual focus.
+
+## Consumables
 
 - [View the custom properties in a .css file](#)
 - [View the type scale in a .figma file](#)
 
 </section>
+````

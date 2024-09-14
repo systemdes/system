@@ -23,6 +23,11 @@ const { headings } = Astro.props;
     font-family: monospace;
   }
 
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   nav ul li {
     list-style-type: none;
     margin: 0;
@@ -47,7 +52,7 @@ const { headings } = Astro.props;
     color: var(--color-primary);
   }
 
-  nav ul li:not(:first-child) {
+  nav ul li {
     margin-left: var(--space-s);
   }
 

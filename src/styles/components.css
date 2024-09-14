@@ -2,10 +2,31 @@ table {
   border-collapse: collapse;
   width: 100%;
   text-align: left;
+  border: var(--border-s);
 }
 
 thead {
-  border-bottom: 1px solid var(--color-secondary);
+  background: var(--color-primary);
+  border-bottom: var(--border-s);
+}
+
+tr {
+  border-bottom: var(--border-s);
+}
+
+td {
+  border: var(--border-s);
+}
+
+th {
+  font-family: monospace;
+  text-transform: lowercase;
+  border: var(--border-s);
+}
+
+th,
+td {
+  padding: var(--space-s) var(--space-m);
 }
 
 .example {
@@ -15,4 +36,42 @@ thead {
   border-radius: var(--radius-s);
   border: var(--border-s);
   padding: var(--space-m);
+  position: relative;
+  margin-top: 3em !important;
+}
+
+.example span {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  border: var(--border-s);
+  font-family: monospace;
+  padding: var(--space-xs) var(--space-s);
+  border-radius: var(--radius-s);
+  display: inline-block;
+}
+
+.example > * + * {
+  margin-block-start: var(--space-s);
+}
+
+.stack > * + * {
+  margin-block-start: var(--space-m);
+}
+
+section p a {
+  text-decoration: underline;
+}
+
+.example small {
+  background: var(--color-tertairy);
+  color: var(--color-secondary);
+  border: var(--border-s);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-1.5em);
+  font-family: monospace;
+  padding: 0 var(--space-s);
+  display: flex;
+  align-items: center;
 }
