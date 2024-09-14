@@ -5,31 +5,55 @@ layout: ../../src/layouts/default.astro
 import Header from "../components/Header.astro";
 
 <Header
-  label="Foundations"
+  label="Core"
   title="Colors"
-  description="Design tokens are a tech-agnostic way to store variables. We use tokens instead of hard coded values to ensure a better UI consistency across different platforms."
+  description="A limmited set of colors providing a standardized palette optimized for neutral, consistenty and balance. "
 />
 
 <section>
 ## Palette
 
-My personal colors are based on a neutral _monochromatic_ color palette. It's a _spectrum_ of 8 tints and shades from white to black creating a grey color theme. Just these tints allow for varying with tints to create hierarchy and elevation but also themes (e.g. light / dark mode) by inverting the spectrum.
+The basis of my personal colors are a neutral _monochromatic_ grey color palette. It's a _spectrum_ of 8 tints and shades from white to black creating a grey color theme. Using these lighter neutral surface allows for varying with saturation to create a sense of hierarchy and elevation but also themes (e.g. light / dark mode) by inverting the spectrum.
 
 ![Adobe Spectrum](https://spectrum.adobe.com/static/images/color_colorSystem_grays@2x_1650380924369.png)
 
-## Naming
+## Scale
 
 In the system of design tokens the tints are labelled in _hundreds_ better known as the _numeric weight scale_. The outermost colors on the spectrum are just **white** and **black**. Everything in between is a value between 100 and 900 to determine it's saturation.
 
 ## Usage
 
-## P3 Color Space
+To create visual hierarchy the grey tones are _layered_ for optical seperation. The **lighter** scale of the spectrum (~100/400) are often used as **background** colors such as page colors, shadows and borders. The **darker** scale of the spectrum (~400/800) are often used as **foreground** colors such as text colors or interactive components like buttons.
+
+### Tokens
+
+#### Digital (P3 Color Space)
 
 | Value | Name | Description                        | Token                  |
 | ----- | ---- | ---------------------------------- | ---------------------- |
 | baz   | bim  | Primary color used for backgrounds | `var(--color-primary)` |
 
-## Pantone
+#### Pantone
+
+| Value | Name | Description                        | Token                  |
+| ----- | ---- | ---------------------------------- | ---------------------- |
+| baz   | bim  | Primary color used for backgrounds | `var(--color-primary)` |
+
+## Gradients
+
+## Textures
+
+### Grain effect
+
+To add some varied and textured backgrounds a 'grainy gradient' can be applied. Usually combined with a solid background modifier.
+
+| Value | Name | Description                        | Token                  |
+| ----- | ---- | ---------------------------------- | ---------------------- |
+| baz   | bim  | Primary color used for backgrounds | `var(--color-primary)` |
+
+### Blur effect
+
+For visual depth, interface components can have a inner background blur applied. Usually this used and reserved for fixed navigational elements such as 'pill' or 'filter' navigations and buttons.
 
 | Value | Name | Description                        | Token                  |
 | ----- | ---- | ---------------------------------- | ---------------------- |

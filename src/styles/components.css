@@ -7,3 +7,12 @@ table {
 thead {
   border-bottom: 1px solid var(--color-secondary);
 }
+
+.example {
+  background: var(--color-tertairy);
+  background-image: radial-gradient(#efefef 0.8px, #fff 0.8px);
+  background-size: 12px 12px;
+  border-radius: var(--radius-s);
+  border: var(--border-s);
+  padding: var(--space-m);
+}
