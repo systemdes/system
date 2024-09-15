@@ -4,3 +4,15 @@
   --color-tertairy: #fff;
   --color-quaternary: #ededed;
 }
+
+:root {
+  --color-100: #fdfdfd;
+  --color-200: #f8f8f8;
+  --color-300: #e6e6e6;
+  --color-400: #d5d5d5;
+  --color-500: #b1b1b1;
+  --color-600: #909090;
+  --color-700: #6c6c6c;
+  --color-800: #464646;
+  --color-900: #222;
+}

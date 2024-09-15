@@ -1,0 +1,84 @@
+<article class="example">
+  <div>
+    <div>100</div>
+    <div>200</div>
+    <div>300</div>
+    <div>400</div>
+    <div>500</div>
+    <div>600</div>
+    <div>700</div>
+    <div>800</div>
+    <div>900</div>
+  </div>
+  <div>
+    <span
+      ><strong>Base [Layer 1]</strong> <br /> (backgrounds, patterns etc.)</span
+    >
+    <span><strong>Center [Layer 2]</strong> <br /> (borders, shadows etc.)</span
+    >
+    <span
+      ><strong>Top [Layer 3]</strong> <br /> (text, icons, buttons etc.)</span
+    >
+  </div>
+</article>
+
+<style>
+  article > div:first-child {
+    display: flex;
+    justify-content: space-between;
+  }
+  div div {
+    width: 7em;
+    height: 7em;
+    font-family: monospace;
+  }
+
+  div span {
+    height: 2px;
+    width: 33%;
+    background: var(--color-quaternary);
+    text-align: center;
+    padding: 0;
+    display: inline-block;
+  }
+
+  div span strong {
+    display: inline-block;
+    margin-top: var(--space-m);
+  }
+
+  div div:nth-of-type(1) {
+    background: var(--color-100);
+  }
+
+  div div:nth-of-type(2) {
+    background: var(--color-200);
+  }
+
+  div div:nth-of-type(3) {
+    background: var(--color-300);
+  }
+
+  div div:nth-of-type(4) {
+    background: var(--color-400);
+  }
+
+  div div:nth-of-type(5) {
+    background: var(--color-500);
+  }
+
+  div div:nth-of-type(6) {
+    background: var(--color-600);
+  }
+
+  div div:nth-of-type(7) {
+    background: var(--color-700);
+  }
+
+  div div:nth-of-type(8) {
+    background: var(--color-800);
+  }
+  div div:nth-of-type(9) {
+    background: var(--color-900);
+  }
+</style>

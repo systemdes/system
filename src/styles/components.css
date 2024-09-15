@@ -62,6 +62,11 @@ section p a {
   text-decoration: underline;
 }
 
+section img {
+  border-radius: var(--radius-m);
+  border: var(--border-s);
+}
+
 .example small {
   background: var(--color-tertairy);
   color: var(--color-secondary);
@@ -81,6 +86,9 @@ pre {
   border-radius: var(--radius-m);
   border: var(--border-s);
   position: relative;
+  background: var(--color-tertairy);
+  background-image: radial-gradient(#efefef 0.8px, #fff 0.8px);
+  background-size: 12px 12px;
 }
 
 [data-language="css"]::before {

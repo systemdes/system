@@ -4,6 +4,9 @@ layout: ../../src/layouts/default.astro
 
 import Header from "../components/Header.astro";
 
+import Palette from "../components/docs/color-usage-example.astro";
+import Scale from "../components/docs/color-scale-example.astro";
+
 <Header
   label="Core"
   title="Colors"
@@ -15,48 +18,30 @@ import Header from "../components/Header.astro";
 
 The basis of my personal colors are a neutral _monochromatic_ grey color palette. It's a _spectrum_ of 8 tints and shades from white to black creating a grey color theme. Using these lighter neutral surface allows for varying with saturation to create a sense of hierarchy and elevation but also themes (e.g. light / dark mode) by inverting the spectrum.
 
-![Adobe Spectrum](https://spectrum.adobe.com/static/images/color_colorSystem_grays@2x_1650380924369.png)
-
 ## Scale
 
 In the system of design tokens the tints are labelled in _hundreds_ better known as the _numeric weight scale_. The outermost colors on the spectrum are just **white** and **black**. Everything in between is a value between 100 and 900 to determine it's saturation.
+
+<Palette />
+
+### Digital
+
+| Value | Name | Description                        | Token                  |
+| ----- | ---- | ---------------------------------- | ---------------------- |
+| baz   | bim  | Primary color used for backgrounds | `var(--color-primary)` |
+
+### Pantone
+
+| Value | Name | Description                        | Token                  |
+| ----- | ---- | ---------------------------------- | ---------------------- |
+| baz   | bim  | Primary color used for backgrounds | `var(--color-primary)` |
 
 ## Usage
 
 To create visual hierarchy the grey tones are _layered_ for optical seperation. The **lighter** scale of the spectrum (~100/400) are often used as **background** colors such as page colors, shadows and borders. The **darker** scale of the spectrum (~400/800) are often used as **foreground** colors such as text colors or interactive components like buttons.
 
-### Tokens
+<Scale />
 
-#### Digital (P3 Color Space)
-
-| Value | Name | Description                        | Token                  |
-| ----- | ---- | ---------------------------------- | ---------------------- |
-| baz   | bim  | Primary color used for backgrounds | `var(--color-primary)` |
-
-#### Pantone
-
-| Value | Name | Description                        | Token                  |
-| ----- | ---- | ---------------------------------- | ---------------------- |
-| baz   | bim  | Primary color used for backgrounds | `var(--color-primary)` |
-
-## Gradients
-
-## Textures
-
-### Grain effect
-
-To add some varied and textured backgrounds a 'grainy gradient' can be applied. Usually combined with a solid background modifier.
-
-| Value | Name | Description                        | Token                  |
-| ----- | ---- | ---------------------------------- | ---------------------- |
-| baz   | bim  | Primary color used for backgrounds | `var(--color-primary)` |
-
-### Blur effect
-
-For visual depth, interface components can have a inner background blur applied. Usually this used and reserved for fixed navigational elements such as 'pill' or 'filter' navigations and buttons.
-
-| Value | Name | Description                        | Token                  |
-| ----- | ---- | ---------------------------------- | ---------------------- |
-| baz   | bim  | Primary color used for backgrounds | `var(--color-primary)` |
+![Layer Technique](../images/layering-example.jpg)
 
 </section>
