@@ -1,47 +1,14 @@
-# Astro Starter Kit: Minimal
+![GitHub Banner](/docs/gh-banner.jpg)
 
-```sh
-npm create astro@latest -- --template minimal
-```
+**`vriOS`** ■ **`system`** is part of the the personal operating system by [@dandevri](#). Read about the philosophy and architecture behind it in [this post](#). The _system_ part closely resembles a **design system** with documentation on opinionated design principles and foundational philosophies for creating personal digital and physical experiences.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+**`system`** consists of eight [5] core components:  
+↳ [1] _Principles_: guides and checklists for creating products  
+↳ [2] _Core_: typography, colors, lay-outs and patterns  
+↳ [3] _Materials_: physical materials and manufacturing processes  
+↳ [4] _Assets_: branding logomarks, wordmarks and biographies  
+↳ [5] _Components_: interface components used for surface layers
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This documentation is build using [Astro](https://github.com/withastro/astro) following its general [Project Structure](https://docs.astro.build/en/basics/project-structure/). Documentation pages are written in [MDX]() for rendering markdown in the [_src/pages_ folder](https://docs.astro.build/en/basics/astro-pages/).
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+[vriOS](https://github.com/systemdes/) © 2024 by [Danny de Vries](https://wwww.github.com/dandevri) is licensed under [MIT](http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1).
