@@ -75,3 +75,38 @@ section p a {
   display: flex;
   align-items: center;
 }
+
+pre {
+  padding: var(--space-l);
+  border-radius: var(--radius-m);
+  border: var(--border-s);
+  position: relative;
+}
+
+[data-language="css"]::before {
+  content: ".css";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: var(--border-s);
+  padding: var(--space-xs) var(--space-s);
+  border-radius: var(--radius-s);
+}
+
+[data-language="js"]::before {
+  content: ".js";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: var(--border-s);
+  padding: var(--space-xs) var(--space-s);
+  border-radius: var(--radius-s);
+}
+
+p > code {
+  border: var(--border-s);
+  padding: var(--space-xs) var(--space-s);
+  border-radius: var(--radius-s);
+}
