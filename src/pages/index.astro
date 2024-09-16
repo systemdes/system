@@ -1,55 +1,65 @@
 ---
-/* Imported components */
-  import Card from '../components/card.astro';
+/* Import default lay-out */
+import Default from "../layouts/default.astro";
 
-  /* Imported icons */
-  import ArrowUpRight from '../components/icons/ph:arrow-up-right.svg?raw';
+/* Imported components */
+import Card from "../components/card.astro";
+
+/* Imported icons */
+import ArrowUpRight from "../components/icons/ph:arrow-up-right.svg?raw";
+
+const { headings } = Astro.props;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/styles/global.css">
-		<title>Astro</title>
-	</head>
-	<body>
-    <header>
-      <div>
-        <h1>vriOS <span>system</span></h1>
-        <span>spec : 10.11.24</span>
-      </div>
-      <p>is an opinionated set of design principles and foundational philosophies for creating digital and physical experiences by Danny de Vries.</p>
-      <a href="#">Read about the architecture</a>
-    </header>
-    <main>
-      <img src="https://placehold.co/1800x600">
-      <section class="grid-xl">
-        <Card image="https://placehold.co/600x600" title="principles" description="Building blocks for interface applications" icon={ArrowUpRight}/>
-        <Card image="https://placehold.co/600x600" title="assets" description="Download brand assets for public use" icon={ArrowUpRight}/>
-        <Card image="https://placehold.co/600x600" title="typography" description="Download wordmarks, icons and logos" icon={ArrowUpRight}/>
-        <Card title="iconography" description="dshflsjflsjfsfl" />
-        <Card title="components" description="dshflsjflsjfsfl" />
-        <Card title="colors" description="dshflsjflsjfsfl" />
-        <Card title="motion" description="dshflsjflsjfsfl" />
-        <Card title="grids" description="dshflsjflsjfsfl" />
-        <Card title="spacing" description="dshflsjflsjfsfl" />
-        <Card title="materials" description="dshflsjflsjfsfl" />
-        <Card title="textiles" description="dshflsjflsjfsfl" />
-      </section>
-    </main>
-	</body>
-</html>
+<Default title="vriOS ▪ [Index]">
+  <header>
+    <div>
+      <h1>vriOS <span>system</span></h1>
+      <span>spec : 10.11.24</span>
+    </div>
+    <p>
+      is an opinionated set of design principles and foundational philosophies
+      for creating digital and physical experiences by Danny de Vries.
+    </p>
+    <a href="#">Read about the architecture</a>
+  </header>
+  <main>
+    <img src="https://placehold.co/1800x600" />
+    <section class="grid-xl">
+      <Card
+        image="https://placehold.co/600x600"
+        title="principles"
+        description="Building blocks for interface applications"
+        icon={ArrowUpRight}
+      />
+      <Card
+        image="https://placehold.co/600x600"
+        title="assets"
+        description="Download brand assets for public use"
+        icon={ArrowUpRight}
+      />
+      <Card
+        image="https://placehold.co/600x600"
+        title="typography"
+        description="Download wordmarks, icons and logos"
+        icon={ArrowUpRight}
+      />
+      <Card title="iconography" description="dshflsjflsjfsfl" />
+      <Card title="components" description="dshflsjflsjfsfl" />
+      <Card title="colors" description="dshflsjflsjfsfl" />
+      <Card title="motion" description="dshflsjflsjfsfl" />
+      <Card title="grids" description="dshflsjflsjfsfl" />
+      <Card title="spacing" description="dshflsjflsjfsfl" />
+      <Card title="materials" description="dshflsjflsjfsfl" />
+      <Card title="textiles" description="dshflsjflsjfsfl" />
+    </section>
+  </main>
+</Default>
 
 <style is:global>
   body {
     background: var(--color-tertairy);
-    background-image: radial-gradient(#EFEFEF 0.8px, #FFF 0.8px);
+    background-image: radial-gradient(#efefef 0.8px, #fff 0.8px);
     background-size: 12px 12px;
     font-family: "Inter", system-ui;
     margin: var(--space-m);
@@ -57,7 +67,7 @@
 </style>
 
 <style>
-    header {
+  header {
     background: #fff;
     border-radius: var(--radius-m);
     padding: var(--space-l);
@@ -73,10 +83,10 @@
   }
 
   header div > span {
-    background: #E9F4FF;
+    background: #e9f4ff;
     padding: var(--space-s) var(--space-s);
     border-radius: var(--radius-s);
-    color: #0060F2;
+    color: #0060f2;
     margin-left: var(--space-m);
   }
 
@@ -93,5 +103,4 @@
     border-radius: var(--radius-l);
     margin-top: var(--space-m);
   }
-
 </style>

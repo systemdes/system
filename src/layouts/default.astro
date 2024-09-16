@@ -1,48 +1,50 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
+// const { headings } = Astro.props;
 
-import Nav from '../components/nav.astro';
-import Breadcrumb from '../components/breadcrumb.astro';
-import Sidebar from '../components/sidebar.astro';
-
-const { headings } = Astro.props;
+import Nav from "../components/nav.astro";
+import Breadcrumb from "../components/breadcrumb.astro";
+import Sidebar from "../components/sidebar.astro";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="/src/styles/global.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-		<title>{title}</title>
-	</head>
-	<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" /><!-- 180×180 -->
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+  </head>
+  <body>
     <Breadcrumb />
     <Sidebar />
     <main>
       <slot />
     </main>
-    <Nav headings={headings} />
-	</body>
+    <!-- <Nav headings={headings} /> -->
+  </body>
 </html>
 <style is:global>
-
   body {
     font-family: "Inter", sans-serif;
     font-size: 1em;
     background: var(--color-tertairy);
-    background-image: radial-gradient(#EFEFEF 1px, #FFF 0.1px);
+    background-image: radial-gradient(#efefef 1px, #fff 0.1px);
     background-size: 12px 12px;
     padding: 0;
     font-family: sans-serif;
@@ -51,11 +53,13 @@ const { headings } = Astro.props;
     margin: var(--space-l);
     grid-template-columns: repeat(16, 1fr); /* Example: 3 equal columns */
     width: 100%; /* Ensures grid container fits within the viewport */
-    width: calc(100% - 2 * var(--space-l)); /* Adjust width to account for margin */
+    width: calc(
+      100% - 2 * var(--space-l)
+    ); /* Adjust width to account for margin */
   }
 
   main {
-    background: #FAFAFA;
+    background: #fafafa;
     border-radius: var(--radius-l);
     grid-column: 2 / 14;
     overflow-y: scroll;
