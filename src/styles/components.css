@@ -58,6 +58,15 @@ td {
   margin-block-start: var(--space-m);
 }
 
+.stack > h2 {
+  margin-block-start: var(--space-2xl);
+}
+
+.stack > h2:not(:first-child) {
+  border-top: var(--border-s);
+  padding-top: var(--space-l);
+}
+
 section p a {
   text-decoration: underline;
 }
@@ -74,9 +83,9 @@ section img {
   position: absolute;
   top: 0;
   right: 0;
-  transform: translateY(-1.5em);
   font-family: monospace;
-  padding: 0 var(--space-s);
+  font-size: var(--size-xs);
+  padding: var(--space-xs) var(--space-s);
   display: flex;
   align-items: center;
 }
@@ -100,6 +109,7 @@ pre {
   border: var(--border-s);
   padding: var(--space-xs) var(--space-s);
   border-radius: var(--radius-s);
+  background: var(--color-tertairy);
 }
 
 [data-language="js"]::before {
@@ -111,6 +121,7 @@ pre {
   border: var(--border-s);
   padding: var(--space-xs) var(--space-s);
   border-radius: var(--radius-s);
+  background: var(--color-tertairy);
 }
 
 p > code {
