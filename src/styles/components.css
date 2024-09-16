@@ -118,3 +118,7 @@ p > code {
   padding: var(--space-xs) var(--space-s);
   border-radius: var(--radius-s);
 }
+
+.footnotes {
+  grid-column: 12 -1;
+}

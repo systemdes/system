@@ -2,28 +2,69 @@
 layout: ../../src/layouts/default.astro
 ---
 
-import Header from "../components/Header.astro";
+import Header from "../components/header.astro";
+
+import Shadows from "../components/docs/elevation-shadow-example.astro";
+import Blur from "../components/docs/elevation-blur-example.astro";
+import Sizes from "../components/docs/elevation-sizes-example.astro";
+import Radius from "../components/docs/elevation-radius-example.astro";
 
 <Header
   label="Core"
   title="Elevations"
-  description="Design tokens are a tech-agnostic way to store variables. We use tokens instead of hard coded values to ensure a better UI consistency across different platforms."
+  description="A set of rules and guidelines that define how to use depth and layering to create a sense of hierarchy and prominence. This elevation system gives components a three-dimensional appearance. Includes the selection of shadows, blurs and lighting to affect the visual presentation of components creating the illusion of depth."
 />
 
 <section>
 
-## Border Sizes
-
-## Border radius
-
 ## Shadows
+
+Shadows are the main way to give the illusion of depth [^1]. Based on the concept of physical surfaces and shadows, simulating how light interacts with objects in the real world. Elements with higher elevation cast larger or more pronounced shadows. Shadows are generally _soft_ and are used to make element stand-out from background content.
+
+<Shadows />
+
+| Value    | Name             | Usage                             | Token             |
+| -------- | ---------------- | --------------------------------- | ----------------- |
+| shadow-s | Low elevation    | Used for buttons, links and forms | `var(--shadow-s)` |
+| shadow-m | Medium elevation | Used for cards, headers and lists | `var(--shadow-m)` |
+| shadow-l | High elevation   | Used for floating items           | `var(--shadow-l)` |
 
 ## Blurs
 
-For visual depth, interface components can have a inner background blur applied. Usually this used and reserved for fixed navigational elements such as 'pill' or 'filter' navigations and buttons.
+<Blur />
 
-| Value | Name | Description                        | Token                  |
-| ----- | ---- | ---------------------------------- | ---------------------- |
-| baz   | bim  | Primary color used for backgrounds | `var(--color-primary)` |
+For visual depth, interface components can have a inner background blur applied [^2]. Usually this used and reserved for fixed navigational elements such as 'pill' or 'filter' navigations and buttons.
+
+| Value  | Name        | Usage                             | Token           |
+| ------ | ----------- | --------------------------------- | --------------- |
+| blur-s | Low fade    | Used for buttons, links and forms | `var(--blur-s)` |
+| blur-m | Medium fade | Used for cards, headers and lists | `var(--blur-m)` |
+| blur-l | High fade   | Used for floating items           | `var(--blur-l)` |
+
+## Border sizes'
+
+<Sizes />
+
+| Value    | Name        | Usage                             | Token             |
+| -------- | ----------- | --------------------------------- | ----------------- |
+| border-s | Low fade    | Used for buttons, links and forms | `var(--border-s)` |
+| border-m | Medium fade | Used for cards, headers and lists | `var(--border-m)` |
+| border-l | High fade   | Used for floating items           | `var(--border-l)` |
+
+## Border radius
+
+The borders are used for _squarish_ elements. Rounded edge feel a little softer and more approachable and help guide the views eyes more smoothly across the page aiding scannability increasing the overall natural flow.
+
+<Radius />
+
+| Value    | Name        | Usage                             | Token             |
+| -------- | ----------- | --------------------------------- | ----------------- |
+| radius-s | Low fade    | Used for buttons, links and forms | `var(--radius-s)` |
+| radius-m | Medium fade | Used for cards, headers and lists | `var(--radius-m)` |
+| radius-l | High fade   | Used for floating items           | `var(--radius-l)` |
 
 </section>
+
+[^1]: [Material Design M3 Elevation guidelines](https://m3.material.io/styles/elevation/overview)
+
+[^2]: [Designing Depth by Rauno](https://rauno.me/craft/depth)

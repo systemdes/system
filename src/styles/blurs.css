@@ -1,0 +1,5 @@
+:root {
+  --blur-s: blur(4px);
+  --blur-m: blur(8px);
+  --blur-l: blur(12px);
+}
